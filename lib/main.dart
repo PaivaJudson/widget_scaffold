@@ -34,7 +34,7 @@ class WidgetsBasicos extends StatelessWidget {
 
   widgetButton() {
     // ignore: deprecated_member_use
-    return SizedBox.expand(
+    return Center(
       child: RaisedButton(
         color: Colors.orange,
         elevation: 40.0,
