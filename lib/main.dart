@@ -35,10 +35,16 @@ class WidgetsBasicos extends StatelessWidget {
 
   widgetImage() {
     return Center(
-      child: Image.network("https://scontent.flad2-1.fna.fbcdn.net/v/t39.30808-6/269603303_301225085272894_4778078205382210599_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=L_06TOEedn4AX9pbO3J&_nc_ht=scontent.flad2-1.fna&oh=00_AT-6gH2imfxtjKv4VE4UuIWlXGXVzQo14iulTwvyrRsoKA&oe=622A90B4"));
+      child: Image.asset(""));
   }
 
-  
+  /*
+   *  widgetImage() {
+      return Center(
+      child: Image.network("https://scontent.flad2-1.fna.fbcdn.net/v/t39.30808-6/269603303_301225085272894_4778078205382210599_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=L_06TOEedn4AX9pbO3J&_nc_ht=scontent.flad2-1.fna&oh=00_AT-6gH2imfxtjKv4VE4UuIWlXGXVzQo14iulTwvyrRsoKA&oe=622A90B4"));
+  } 
+   * 
+   */
 
   
 }
