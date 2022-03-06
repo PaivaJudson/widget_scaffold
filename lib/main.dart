@@ -1,53 +1,46 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/widget_scaffold.dart';
+import 'package:hello_world/widget_text.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "App Widget",
-      home: meuWidget(),
+      theme: ThemeData(primaryColor: Colors.blue),
+      home: WidgetsBasicos(),
     );
   }
+}
 
-  meuWidget() {
+class WidgetsBasicos extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Flutter - 2019"),
-        centerTitle: true,
+        title: const Text("Widgts Básicos"),
       ),
       body: Container(
         color: Colors.white,
+        child: widgetButton(),
       ),
-      drawer: Container(
-        color: Colors.orange,
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add_a_photo),
-        onPressed: () {print("Pressionado");},
-      ),
-      bottomNavigationBar: BottomAppBar(
-        child: Container(
-          height: 40.0,
-          child: Row(
-            children: [
-              Text("Meu bottomAppBar"),
-              Icon(Icons.home),
-            ],
-          ),
-        ),
-        color: Colors.lime,
-      ),
-      persistentFooterButtons: [
-        IconButton(icon: Icon(Icons.add_alarm),
-        onPressed: null,)
-      ],
     );
   }
+
+  widgetButton() {
+    // ignore: deprecated_member_use
+    return RaisedButton(
+      child: Text("Clique-me"),
+      onPressed: () { 
+        print("Pressionado!!");
+       },
+    );
+  }
+
   
 }
