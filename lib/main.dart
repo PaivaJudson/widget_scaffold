@@ -35,7 +35,11 @@ class WidgetsBasicos extends StatelessWidget {
 
   widgetImage() {
     return Center(
-      child: Image.asset(""));
+      child: Image.asset(
+        "imagens/cachorro5.jpg", 
+        width: 300, 
+        height: 200,)
+        );
   }
 
   /*
