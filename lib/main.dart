@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/widget_raisedButton.dart';
 import 'package:hello_world/widget_scaffold.dart';
 import 'package:hello_world/widget_text.dart';
 
@@ -26,31 +27,24 @@ class WidgetsBasicos extends StatelessWidget {
         title: const Text("Widgts Básicos"),
       ),
       body: Container(
-        color: Colors.white,
-        child: widgetButton(),
+        height: double.infinity,
+        color: Colors.yellow,
+        child: widgetRowColumn(),
       ),
     );
   }
 
-  widgetButton() {
-    // ignore: deprecated_member_use
-    return Center(
-      child: RaisedButton(
-        color: Colors.orange,
-        elevation: 40.0,
-        textColor: Colors.white,
-        child: Text("Clique-me", 
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 20.0,
-        ),),
-        onPressed: () => exibirTexto("Pressionado"),
-      ),
+  widgetRowColumn() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        widgetButton(),
+        widgetButton(),
+        widgetButton()
+      ],
     );
   }
 
   
-  void exibirTexto(String msg) {
-    print(msg);
-  }
 }
