@@ -34,13 +34,23 @@ class WidgetsBasicos extends StatelessWidget {
 
   widgetButton() {
     // ignore: deprecated_member_use
-    return RaisedButton(
-      child: Text("Clique-me"),
-      onPressed: () { 
-        print("Pressionado!!");
-       },
+    return Center(
+      child: RaisedButton(
+        color: Colors.orange,
+        elevation: 40.0,
+        textColor: Colors.white,
+        child: Text("Clique-me", 
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 20.0,
+        ),),
+        onPressed: () => exibirTexto("Pressionado"),
+      ),
     );
   }
 
   
+  void exibirTexto(String msg) {
+    print(msg);
+  }
 }
